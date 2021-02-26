@@ -1,0 +1,197 @@
+*{
+	padding:0;
+	margin:0;
+}
+
+body{
+	background-color:black;
+}
+
+#glavni{
+	position:relative;
+	margin:100px 0px 0px 560px;
+	border:black solid 2px;
+	border-radius:20px;
+	width:760px;
+	height:760px;
+	background-color:rgb(151, 255, 94);
+	animation-name:glavniAnim;
+	animation-duration:1s;
+}
+
+.notranji{
+	position:absolute;
+	width:380px;
+	height:460px;
+	border:black solid 1px;
+	border-radius:20px;
+	background-color:rgb(97, 255, 242);
+	top:160px;
+	left:190px;
+	box-shadow:10px 10px 5px rgb(0, 107, 98);
+}
+
+.naslov{
+	user-select:none;
+	font-family:'Montserrat', sans-serif;
+ 	font-weight:300px;
+ 	text-transform:uppercase;
+ 	margin-left:260px;
+ 	margin-top:120px;
+ 	text-shadow:5px 5px 10px;
+ 	animation-name:naslovAnim;
+ 	animation-duration:1s;
+}
+
+@keyframes naslovAnim{
+	0%	{margin-top:0px;}
+	100%{margin-top:120px;}
+}
+
+@keyframes glavniAnim{
+	0%	{margin-top:-860px}
+	20%	{margin-top:100px}
+	40%	{margin-top:70px}
+	60%	{margin-top:90px}
+	80%	{margin-top:80px}
+	90%	{margin-top:90px}
+	100%{margin-top:100px;}
+}
+
+ul{
+	list-style-type:none;
+	margin-top:15px;
+}
+
+li{
+	margin-bottom:15px;
+	margin-left:15px;
+}
+
+input{
+	font-family: 'Lora', serif;
+}
+
+.potrdi{
+	user-select:none;
+	font-family:'Montserrat', sans-serif;
+	background-color:rgb(151, 255, 94);
+	border:black solid 1px;
+	border-radius:20px;
+	color:black;
+	padding:15px 32px;
+	text-align:center;
+	text-decoration:none;
+	display:inline-block;
+	font-size:16px;
+	margin-left:230px;
+	cursor:pointer;
+}
+
+.potrdi:hover{
+	background-color:rgb(71, 201, 0);
+}
+
+input[type=text] {
+	user-select:none;
+  	width:95%;
+  	padding:12px;
+  	box-sizing:border-box;
+  	border:3px solid #ccc;
+  	border-radius:20px;
+  	-webkit-transition:1s;
+  	transition:1s;
+  	outline:none;
+}
+
+input[type=text]:focus {
+  	border:3px solid #555;
+}
+
+input[type=email] {
+	user-select:none;
+  	width:95%;
+  	padding:12px;
+  	box-sizing:border-box;
+  	border:3px solid #ccc;
+  	border-radius:20px;
+  	-webkit-transition:1s;
+  	transition:1s;
+  	outline:none;
+}
+
+input[type=email]:focus {
+  	border:3px solid #555;
+}
+
+input[type=password] {
+	user-select:none;
+  	width:95%;
+  	padding:12px;
+  	box-sizing:border-box;
+  	border:3px solid #ccc;
+  	border-radius:20px;
+  	-webkit-transition:1s;
+  	transition:1s;
+  	outline:none;
+}
+
+input[type=password]:focus {
+  	border:3px solid #555;
+}
+
+.radio {
+	font-family:'Montserrat', sans-serif;
+	width:60px;
+	display:block;
+	position:relative;
+	padding-left:35px;
+	margin-bottom:12px;
+	cursor:pointer;
+	font-size:22px;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+}
+
+.radio input {
+ 	position:absolute;
+  	opacity:0;
+  	cursor:pointer;
+}
+.checkmark {
+  	position:absolute;
+  	top:0;
+  	left:0;
+  	height:25px;
+  	width:25px;
+  	background-color:#eee;
+  	border-radius:50%;
+}
+.radio:hover input ~ .checkmark {
+  	background-color:#ccc;
+}
+
+.radio input:checked ~ .checkmark {
+  	background-color:#2196F3;
+}
+
+.checkmark:after {
+  	content:"";
+  	position:absolute;
+  	display:none;
+}
+
+.radio input:checked ~ .checkmark:after {
+  	display:block;
+}
+
+.radio .checkmark:after {
+ 	top:9px;
+	left:9px;
+	width:8px;
+	height:8px;
+	border-radius:50%;
+	background:white;
+}
